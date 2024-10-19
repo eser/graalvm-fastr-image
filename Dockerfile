@@ -11,7 +11,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends git curl build-essential ca-certificates && \
+    apt-get install -y --no-install-recommends git curl build-essential ca-certificates libfreetype6 r-base && \
     rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 RUN mkdir -p /app /opt/java /opt/maven /tmp/downloads /tmp/download-cache

@@ -8,4 +8,5 @@ services:
       - ./projects:/app/projects
     tty: true
     stdin_open: true
-    # command: /bin/bash
+    ports:
+      - 8080:8080
