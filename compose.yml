@@ -1,0 +1,11 @@
+services:
+  main:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./projects:/app/projects
+    tty: true
+    stdin_open: true
+    # command: /bin/bash

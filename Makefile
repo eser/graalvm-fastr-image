@@ -1,11 +1,19 @@
-.PHONY: build
-build:
-	docker build --platform linux/amd64 -t eser/graalvm-fastr-image:latest .
+.PHONY: start
+start:
+	docker compose up --detach
 
-.PHONY: rebuild
-rebuild:
-	docker build --no-cache --platform linux/amd64 -t eser/graalvm-fastr-image:latest .
+.PHONY: restart
+restart:
+	docker compose restart
+
+.PHONY: stop
+stop:
+	docker compose stop
+
+.PHONY: clean
+clean:
+	docker compose down --volumes
 
 .PHONY: run
 run:
-	docker run --rm -it eser/graalvm-fastr-image:latest
+	docker compose exec -it main /bin/bash
