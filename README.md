@@ -4,6 +4,9 @@ This project provides a Docker codebase with GraalVM and FastR (R language imple
 
 ## Project Overview
 
+> **Warning**
+> Since FastR is not available on macOS and any platform with the newest GraalVM versions, this project provides a Docker image with an older version of GraalVM that has FastR installed. See the [GraalVM R Runtime chapter in the GraalVM reference manual](https://www.graalvm.org/latest/reference-manual/r/) for more information.
+
 The main purpose of this project is to create a reproducible and isolated environment for running R programs using GraalVM's FastR implementation. The Docker image is based on Ubuntu and includes:
 
 - GraalVM Community Edition (Java 17)
